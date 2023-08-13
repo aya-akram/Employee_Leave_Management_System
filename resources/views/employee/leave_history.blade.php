@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.master1')
 
 
 @section('content')
@@ -50,7 +50,7 @@
                                         <td>{{ $leave->FromDate }}</td>
                                         <td>{{ $leave->ToDate }}</td>
                                         <td>{{ $leave->created_at }}</td>
-                                        <td>{{ $leave->Remark ?? '-' }}</td>
+                                        <td>{{ $leave->Description ?? '-' }}</td>
                                         <td>{{ $leave->Status }}</td>
                                         @if (auth()->user()->isAdmin())
                                             <td>

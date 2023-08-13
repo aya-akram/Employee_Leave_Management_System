@@ -22,6 +22,19 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('admin.dashboard')}}" data-toggle="collapse" data-target="#h"
+            aria-expanded="true" aria-controls="collapseCategory">
+            <i class="fas fa-fw fa-tags"></i>
+            <span>Dashborad</span>
+        </a>
+        <div id="h" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.dashboard')}}" >Admin dashboard</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('admin.employees')}}" data-toggle="collapse" data-target="#collapseCategory"
             aria-expanded="true" aria-controls="collapseCategory">
             <i class="fas fa-fw fa-tags"></i>
@@ -35,73 +48,53 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('admin.department')}}" data-toggle="collapse" data-target="#collapseCategory"
+        <a class="nav-link collapsed" href="{{route('admin.department')}}" data-toggle="collapse" data-target="#collapseCategoryy"
             aria-expanded="true" aria-controls="collapseCategory">
             <i class="fas fa-fw fa-tags"></i>
             <span>Department Section</span>
         </a>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseCategoryy" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('admin.department')}}" >All Department</a>
             </div>
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('admin.leaveSaction')}}" data-toggle="collapse" data-target="#collapseCategory"
+        <a class="nav-link collapsed" href="{{route('admin.leaveSaction')}}" data-toggle="collapse" data-target="#c"
             aria-expanded="true" aria-controls="collapseCategory">
             <i class="fas fa-fw fa-tags"></i>
             <span>Leave Types</span>
         </a>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="c" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('admin.leaveSaction')}}" >Leave</a>
             </div>
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('admin.leaveSaction')}}" data-toggle="collapse" data-target="#collapseCategory"
+        <a class="nav-link collapsed" href="{{route('admin.leaveSaction')}}" data-toggle="collapse" data-target="#e"
             aria-expanded="true" aria-controls="collapseCategory">
             <i class="fas fa-fw fa-tags"></i>
             <span>Manage Leave</span>
         </a>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="e" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('admin.pendingLeaves')}}" >Pending</a>
             </div>
         </div>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="e" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('admin.approvedLeaves')}}" >Approved</a>
             </div>
         </div>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="e" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('admin.declinedLeaves')}}" >Declined</a>
             </div>
         </div>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('leaves.indexx')}}" >Leave History</a>
-            </div>
-        </div>
+ 
     </li>
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('admin.leaveSaction')}}" data-toggle="collapse" data-target="#collapseCategory"
-            aria-expanded="true" aria-controls="collapseCategory">
-            <i class="fas fa-fw fa-tags"></i>
-            <span>Manage Employee</span>
-        </a>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('employee.leave')}}" >Apply Leave</a>
-            </div>
-        </div>
-        <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('employee.leaveHistory')}}" >View My Leave History</a>
-            </div>
-        </div>
-    </li>
+
 
 
 

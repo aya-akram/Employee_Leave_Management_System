@@ -29,8 +29,9 @@
 
             <div class="card-body">
                                 <div class="data-tables datatable-dark">
-                                <center><a href="{{route('admin.addDepartment')}}" class="btn btn-sm btn-info">Add New Department</a></center>
-                                    <table id="dataTable3" class="table table-hover table-striped text-center">
+                                <center><a href="{{route('admin.addDepartment')}}" class="btn btn-sm btn-success">Add New Department</a></center>
+                                <hr>
+                                <table id="dataTable3" class="table table-hover table-striped text-center">
                                         <thead class="text-capitalize">
                                             <tr>
                                                 <th>#</th>

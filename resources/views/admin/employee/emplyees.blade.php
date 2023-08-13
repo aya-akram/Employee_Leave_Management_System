@@ -10,7 +10,8 @@
     @endif
     <div class="card-body">
         <div class="data-tables datatable-dark">
-            <center><a href="{{route('admin.addEmployee')}}" class="btn btn-sm btn-info">Add New Employee</a></center>
+            <center><a href="{{route('admin.addEmployee')}}" class="btn btn-sm btn-success">Add New Employee</a></center>
+            <hr>
             <table id="dataTable3" class="table table-hover table-striped text-center">
                 <thead class="text-capitalize">
                     <tr>

@@ -26,7 +26,7 @@ class Leave extends Model
     }
 
 protected $attributes = [
-    'Status' => 'Approved', // Set default status to Approved
+    'Status' => 'Pending', // Set default status to Approved
 ];
 public function employee()
 {

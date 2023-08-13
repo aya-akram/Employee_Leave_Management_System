@@ -15,8 +15,10 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
+
     public function create(): View
     {
+
         return view('auth.login');
     }
 
@@ -25,6 +27,26 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            $user = Auth::user();
+            if ($user->user_type == 'admin') {
+                return redirect()->route('admin.employees'); // Redirect to the admin dashboard
+            } elseif ($user->user_type == 'employee') {
+                return redirect()->route('employee.leaveHistory'); // Redirect to the employee section
+            }
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
         $request->authenticate();
 
         $request->session()->regenerate();

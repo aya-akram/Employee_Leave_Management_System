@@ -18,6 +18,7 @@ class DepartmentController extends Controller
     {
         return view('admin.department.add_department');
     }
+    
     public function store(Request $request)
     {
         // Validate the incoming request data

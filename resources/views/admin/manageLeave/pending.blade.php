@@ -51,8 +51,12 @@
                                                         <td>{{ $leave->employee->FirstName ?? '' }} {{ $leave->employee->LastName ?? '' }}</td>
                                                         <td>{{ $leave->LeaveType }}</td>
                                                         <td>{{ $leave->created_at }}</td>
-                                                        <td>{{ $leave->Status }}</td>
-                                                        <td>
+                                                        <td> @if ($leave->Status == 'Pending')
+                                                        <span style="color: blue">Pending <i class="fa fa-spinner"></i></span>
+
+                                                @else
+                                                    {{ $leave->Status ?? 'N/A' }}
+                                                @endif</td>                                                                                    <td>
                                                             <!-- Add action buttons if needed -->
                                                         </td>
                                                     </tr>

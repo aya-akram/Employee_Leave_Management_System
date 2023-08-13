@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LeaveController;
@@ -75,6 +76,12 @@ Route::put('/admin/leave/update-status/{id}', [App\Http\Controllers\LeaveControl
 
 // Define the route for updating an employee
 Route::get('/employee/update/{empid}', [EmployeeController::class, 'updatee'])->name('employee.update');
+
+
+Route::get('admin/dashboard',[AdminController::class,'index'])->name('admin.dashboard');
+Route::get('admin/leaves/{id}', [AdminController::class,'show'])->name('admin.leaves.show');
+Route::post('admin/leaves/{id}/set-action', [AdminController::class,'setAction'])->name('admin.leaves.setAction');
+Route::delete('/admin/leaves/{id}',[AdminController::class,'destroy'])->name('admin.deleteLeave');
 
 // Define the route for viewing leave details for an employee
 Route::get('/employee/leave/details/{leaveid}', [LeaveController::class, 'leaveDetailss'])->name('employee.leave.details');
